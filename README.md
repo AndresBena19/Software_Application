@@ -112,7 +112,7 @@ El patrón singleton provee una única instancia global gracias a que:
     }
 
 }
- ``` 
+``` 
  
 Para hacer uso del metodo singleton tenemos la clase **Asistencia** en la cual definimos y contruimos un objeto, estatico, final y con el modificador de acceso  privado, llamado **contador**, esto se hace con el fin de que sea necesario poner la clase delante del metodo al intanciarlo, que no sea posible declarar un objeto con el mismo nombre en otras clases que hereden y ademas que clases no tengan acceso al metodo, respectivamente.
 
@@ -133,12 +133,11 @@ Tambien tenemos el contructor por defecto con el modificador de acceso privado, 
  
  Esto lo vemos implementado en el MainActivity
  
-
-  ``` 
+``` 
    Persona A= FactoryAcademia.Obtener("Estudiante");
                 Asistencia Cont= Asistencia.getInstance();
                 Cont.setContador(1);
-   ``` 
+``` 
  * Instanciamos un objeto de tipo estudiante
  * Instanciamos un  objeto de tipo Asistencia y le pasamos "1", a su metodo setter
  
@@ -156,17 +155,17 @@ Tambien tenemos el contructor por defecto con el modificador de acceso privado, 
  Persona A= FactoryAcademia.Obtener("Administrativo");
                 Asistencia Cont= Asistencia.getInstance();
                 Cont.setContador(1);
- ```
+```
 * Intanciamos un objeto de tipo  Profesor
 * Instanciamos un  objeto de tipo Asistencia y le pasamos "1", a su metodo setter
 * **Nuevamente al intanciar un objeto de tipo Asistencia, sin importar el  nombre, estamos haciendo referencia al mismo objeto *contador* intanciado en la clase *Asistencia* el cual  modifica la misma variable *Asis*, con el metodo *SetContador()***
 
 
 Finalmente en cada actividad de la applicacion  se hace un llamado al metodo Getter de la clase Asistencia **GetContador()**
-   ``` 
+``` 
   cont.setText("cont : " + Cont.GetContador());
 
-   ``` 
+``` 
   Lo que nos dara como resultando el numero de instancia creadas de cada clase, esto es posible a que la clase asistencia, siempre retornaba el objeto **contador** el cual le permitia modificar por medio del metodo **SetContador()**, la variable **Asis** la cual funcionaba como acumuladora durante todo el proceso de ejecuacion de la App.
   
   
