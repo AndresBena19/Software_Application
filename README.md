@@ -170,7 +170,7 @@ Finalmente en cada actividad de la applicacion  se hace un llamado al metodo Get
   Lo que nos dara como resultando el numero de instancia creadas de cada clase, esto es posible a que la clase asistencia, siempre retornaba el objeto **contador** el cual le permitia modificar por medio del metodo **SetContador()**, la variable **Asis** la cual funcionaba como acumuladora durante todo el proceso de ejecuacion de la App.
   
   
-  Referencias 
+  **Referencias**
   
   * https://es.wikipedia.org/wiki/Singleton
   * https://es.wikipedia.org/wiki/Factory_Method_(patr%C3%B3n_de_dise%C3%B1o)
