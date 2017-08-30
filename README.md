@@ -150,7 +150,7 @@ Tambien tenemos el contructor por defecto con el modificardor de acceso privado 
    ```
  * Intanciamos un objeto de tipo  Profesor
  * Instanciamos un  objeto de tipo Asistencia y le pasamos "1", a su metodo setter
- **En este caso al intanciar un objeto de tipo Asistencia, sin importar el  nombre, estamos haciendo referencia al mismo objeto *contador* intanciado en la clase *Asistencia* el cual  modifica la misma variable *Asis*, con el metodo *SetContador()***
+ ** En este caso al intanciar un objeto de tipo Asistencia, sin importar el  nombre, estamos haciendo referencia al mismo objeto *contador* intanciado en la clase *Asistencia* el cual  modifica la misma variable *Asis*, con el metodo *SetContador()* **
  
  ```
  Persona A= FactoryAcademia.Obtener("Administrativo");
@@ -159,4 +159,4 @@ Tambien tenemos el contructor por defecto con el modificardor de acceso privado 
  ```
 * Intanciamos un objeto de tipo  Profesor
 * Instanciamos un  objeto de tipo Asistencia y le pasamos "1", a su metodo setter
-**Nuevamente al intanciar un objeto de tipo Asistencia, sin importar el  nombre, estamos haciendo referencia al mismo objeto *contador* intanciado en la clase *Asistencia* el cual  modifica la misma variable *Asis*, con el metodo *SetContador()***
+** Nuevamente al intanciar un objeto de tipo Asistencia, sin importar el  nombre, estamos haciendo referencia al mismo objeto *contador* intanciado en la clase *Asistencia* el cual  modifica la misma variable *Asis*, con el metodo *SetContador()* **
