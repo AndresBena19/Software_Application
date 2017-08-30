@@ -74,7 +74,7 @@ public class Estudiante extends Persona  {
 
 ``` 
 
-Gracias a esto, es posible hacer uso del patron de diseño factory, para que nuestra App, retorne un tipo de objeto  dependiendo del valor de entrada
+Gracias a esto, es posible hacer uso del patron de diseño factory, para que nuestra App, retorne un tipo de objeto diferente dependiendo del valor de entrada
 
 
 
