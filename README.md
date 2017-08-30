@@ -114,9 +114,9 @@ El patrón singleton provee una única instancia global gracias a que:
 }
  ``` 
  
-Para hacer uno del metodo singleton tenemos la clase **Asistencia** en la cual definimos y contruimos un objeto, estatico, final y con el modificador de acceso  privada, llamado **contador**, esto se hace con el fin de que  necesario poner la clase delante del metodo al intanciarlo, que no sea posible declarar un objeto con el mismo nombre en otras clases que hereden y que otras clases no tengan acceso al metodo, respectivamente.
+Para hacer uso del metodo singleton tenemos la clase **Asistencia** en la cual definimos y contruimos un objeto, estatico, final y con el modificador de acceso  privado, llamado **contador**, esto se hace con el fin de que sea necesario poner la clase delante del metodo al intanciarlo, que no sea posible declarar un objeto con el mismo nombre en otras clases que hereden y ademas que clases no tengan acceso al metodo, respectivamente.
 
-Tambien tenemos el contructor por defecto con el modificardor de acceso privado y consigo 3 metodos.
+Tambien tenemos el contructor por defecto con el modificador de acceso privado, y consigo 3 metodos.
 
  * SetContador(int a)
  * GetContador()
