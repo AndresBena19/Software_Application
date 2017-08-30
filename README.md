@@ -25,7 +25,7 @@ public class FactoryAcademia {
 
 ``` 
 
-En este caso, tenemos la clase factory academia, en la cual tenemos un unico metodo Getter llamado, **Obtener()**, que nos permite atravez de una entrada determinada, retornar un objeto de tipo, Estudiante, Profesor, Administrativo.
+En este caso, tenemos la clase **FactoryAcademia**, en la cual tenemos un unico metodo Getter llamado, **Obtener()**, que nos permite atravez de una entrada determinada, retornar un objeto de tipo, Estudiante, Profesor, Administrativo.
 
 Esta 3 clases, heredan de la clase padre persona 
 ``` 
@@ -75,3 +75,88 @@ public class Estudiante extends Persona  {
 ``` 
 
 Gracias a esto, es posible hacer uso del patron de diseño factory, para que nuestra App, retorne un tipo de objeto  dependiendo del valor de entrada
+
+
+
+
+# Metodo Singleton #
+
+
+
+El patrón singleton se implementa creando en nuestra clase un método que crea una instancia del objeto sólo si todavía no existe alguna. Para asegurar que la clase no puede ser instanciada nuevamente se regula el alcance del constructor (con modificadores de acceso como protegido o privado).
+
+El patrón singleton provee una única instancia global gracias a que:
+ * La propia clase es responsable de crear la única instancia.
+ * Permite el acceso global a dicha instancia mediante un método de clase.
+ * Declara el constructor de clase como privado para que no sea instanciable directamente.
+ * Al estar internamente autoreferenciada, en lenguajes como Java, el recolector de basura no actúa.
+ 
+ ```
+ public class Asistencia {
+
+    private static final Asistencia contador=new Asistencia();
+    private int Asis=0;
+
+    private Asistencia(){}
+
+    public static Asistencia getInstance() {
+        return contador;
+    }
+
+    public void setContador(int a){
+        Asis=Asis+a;
+    }
+
+    public int GetContador(){
+        return Asis;
+    }
+
+}
+ ``` 
+ 
+Para hacer uno del metodo singleton tenemos la clase **Asistencia** en la cual definimos y contruimos un objeto, estatico, final y con el modificador de acceso  privada, llamado **contador**, esto se hace con el fin de que  necesario poner la clase delante del metodo al intanciarlo, que no sea posible declarar un objeto con el mismo nombre en otras clases que hereden y que otras clases no tengan acceso al metodo, respectivamente.
+
+Tambien tenemos el contructor por defecto con el modificardor de acceso privado y consigo 3 metodos.
+
+ * SetContador(int a)
+ * GetContador()
+ * GetInstance()
+ 
+ **GetContador()**, es el metodo Getter encargado de retornarnos el valor que tiene la variable privada **Asis**
+ **SetContador(int a)**, es el metodo Setter encargado de recibir el valor que se asumira como unidad de asistencia, 
+ 
+ 
+ los 3 anteriores el metodo **GetIntandes()** Cumple un papel fundamental, ya que este es el metodo encargado de retornar el objeto **contador** instanciado anteriormente en la clase.
+ 
+ Lo que se busca con esto, es que al momento de instanciar un objeto de tipo asistencia, se este instanciando al mismo objeto **contador**, no importa las veces que se intancien siempre  se hara referencia a el objeto intanciado en la clase Asistencia
+ 
+ 
+ Esto lo vemos implementado en el MainActivity
+ 
+
+  ``` 
+   Persona A= FactoryAcademia.Obtener("Estudiante");
+                Asistencia Cont= Asistencia.getInstance();
+                Cont.setContador(1);
+   ``` 
+ * Instanciamos un objeto de tipo estudiante
+ * Instanciamos un  objeto de tipo Asistencia y le pasamos "1", a su metodo setter
+ 
+ 
+   ``` 
+   Persona A=  FactoryAcademia.Obtener("Profesor");
+                Asistencia Cont= Asistencia.getInstance();
+                Cont.setContador(1);
+   ```
+ * Intanciamos un objeto de tipo  Profesor
+ * Instanciamos un  objeto de tipo Asistencia y le pasamos "1", a su metodo setter
+ **En este caso al intanciar un objeto de tipo Asistencia, sin importar el  nombre, estamos haciendo referencia al mismo objeto *contador* intanciado en la clase *Asistencia* el cual  modifica la misma variable *Asis*, con el metodo *SetContador()*
+ 
+ ```
+ Persona A= FactoryAcademia.Obtener("Administrativo");
+                Asistencia Cont= Asistencia.getInstance();
+                Cont.setContador(1);
+ ```
+* Intanciamos un objeto de tipo  Profesor
+* Instanciamos un  objeto de tipo Asistencia y le pasamos "1", a su metodo setter
+**Nuevamente al intanciar un objeto de tipo Asistencia, sin importar el  nombre, estamos haciendo referencia al mismo objeto *contador* intanciado en la clase *Asistencia* el cual  modifica la misma variable *Asis*, con el metodo *SetContador()*
