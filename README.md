@@ -25,7 +25,7 @@ public class FactoryAcademia {
 
 ``` 
 
-En este caso, tenemos la clase factory academia, en la cual tenemos un unico metodo Getter llamado, Obtener(), que nos permite atravez de una entrada determinada, retornar un objeto de tipo, Estudiante, Profesor, Administrativo.
+En este caso, tenemos la clase factory academia, en la cual tenemos un unico metodo Getter llamado, **Obtener()**, que nos permite atravez de una entrada determinada, retornar un objeto de tipo, Estudiante, Profesor, Administrativo.
 
 Esta 3 clases, heredan de la clase padre persona 
 ``` 
@@ -60,7 +60,7 @@ public abstract class  Persona {
 ``` 
 
 
-La clase persona es contenedora de un metodo abstracto (Settipo(String T);), lo que obliga a la clase a ser abstracta y ademas  utilizar por obligacion en cada clase que herede el metodo, ya que el valor de este metodo Setter, sera el encargado de definir de que tipo de objeto retorna la clase FactoryAcademia()
+La clase persona es contenedora de un metodo abstracto **(Settipo(String T);)**, lo que obliga a la clase a ser abstracta y ademas  utilizar por obligacion en cada clase que herede el metodo, ya que el valor de este metodo Setter, sera el encargado de definir de que tipo de objeto retorna la clase FactoryAcademia()
 
 Ejemplo de esto, en la clase Estudiante
 ``` 
