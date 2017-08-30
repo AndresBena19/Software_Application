@@ -60,7 +60,7 @@ public abstract class  Persona {
 ``` 
 
 
-La clase persona es contenedora de un metodo abstracto **(Settipo(String T);)**, lo que obliga a la clase a ser abstracta y ademas  utilizar por obligacion en cada clase que herede el metodo, ya que el valor de este metodo Setter, sera el encargado de definir de que tipo de objeto retorna la clase FactoryAcademia()
+La clase persona es contenedora de un metodo abstracto **(Settipo(String T);)**, lo que obliga a la clase a ser abstracta y ademas a ser utilizado por obigacion en todas las clases que hereden de ella, ya que el valor de este metodo Setter, sera el encargado de definir de que tipo de objeto retorna la clase FactoryAcademia()
 
 Ejemplo de esto, en la clase Estudiante
 ``` 
